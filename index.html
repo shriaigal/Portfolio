@@ -225,7 +225,7 @@
 }
 
 @media (max-width: 768px) {
-  header {
+ header {
     padding: 20px 40px;
     flex-direction: column;
     align-items: flex-start;
@@ -233,11 +233,15 @@
 
   nav {
     margin-top: 10px;
+    display: flex;         /* use flex to keep inline */
+    flex-wrap: nowrap;     /* no wrapping */
+    overflow-x: auto;      /* allow scroll if needed */
   }
 
   nav a {
-    margin: 0 10px 10px 0;
-    display: inline-block;
+    margin: 0 10px 0 0;    /* adjust margin */
+    font-size: 0.85em;     /* slightly smaller on small screens */
+    white-space: nowrap;   /* stay inline */
   }
 
   .btn-talk {
@@ -267,9 +271,14 @@
     font-size: 1.5em;
   }
 
+  nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
   nav a {
-    margin: 5px 5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    margin: 0 8px 0 0;
   }
 
   .btn-talk {
