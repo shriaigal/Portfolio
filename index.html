@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A S Shridatta Aigal | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+
+    .logo span {
+      color: #7d2ae8;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #7d2ae8;
+    }
+
+    .btn-talk {
+      padding: 8px 20px;
+      background: #7d2ae8;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 120px 100px 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .home-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .home-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .home-image {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .home-image img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .portfolio-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #7d2ae8;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    .gradient-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #3b82f6, #7d2ae8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .gradient-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .gradient-btn .blink {
+      margin-left: 8px;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+    .contact-list li {
+      margin-bottom: 10px;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        padding: 20px 40px;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      section {
+        padding: 120px 40px 50px;
+      }
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .home-image {
+        margin-top: 30px;
+      }
+    }
+    /* Animation: fade up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 2s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+
+
+  <header>
+    <h2 class="logo"><span>shri</span>aigal</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="mailto:shriaigal@gmail.com" class="btn-talk">Let's Talk</a>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+    <div class="home-container">
+<div class="home-text">
+  <h1>Hi, I'm A S Shridatta Aigal</h1>
+  <p>I'm a passionate Frontend Developer dedicated to creating beautiful, responsive, and user-friendly web experiences. With a solid background in HTML, CSS, JavaScript, and modern frameworks, I bring ideas to life in the browser.</p>
+  <p>My goal is to craft websites and apps that not only look great but also perform flawlessly. I enjoy solving real-world problems through code and constantly push myself to learn new technologies and improve my skills.</p>
+  <p>Besides coding, I love collaborating with designers, product managers, and other developers to bring innovative ideas to life. I believe good design and clean code go hand-in-hand to create impactful digital products.</p>
+  <p>When I'm not working on projects, you'll often find me exploring new frameworks, contributing to open-source, or researching the latest trends in frontend development and software architecture.</p>
+</div>
+
+      <div class="home-image">
+        <img src="static/my photo.png" alt="Shridatta Aigal">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p>I'm a passionate Full Stack Web Developer currently pursuing my BCA. I have strong skills in designing, developing, and deploying web applications from scratch, covering both frontend and backend development.</p>
+    <p>I enjoy building user-friendly, responsive, and dynamic web solutions using modern tools and frameworks. Over the past few years, I have created projects ranging from static websites to interactive apps and backend systems.</p>
+    <ul>
+      <li>🌐 HTML, CSS, JavaScript</li>
+      <li>🐍 Python, Flask (Framework)</li>
+      <li>🗄️ SQLite3, PHP, phpMyAdmin</li>
+      <li>☕ Java, R Programming</li>
+      <li>📱 Responsive & Mobile-First Design</li>
+      <li>💡 Creative Problem Solving & Full Stack Development</li>
+    </ul>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio">
+    <h1>My Portfolio</h1>
+    <p>Here are a few projects I've worked on recently:</p>
+
+    <div class="portfolio-cards">
+      <div class="card">
+        <h3>Student Academic Portal</h3>
+        <p>A complete student management system to manage attendance, marks, and student data using Flask, SQLite, and modern frontend design.</p>
+        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+      </div>
+
+      <div class="card">
+        <h3>AgriPrice Portal</h3>
+        <p>A web application to track and display agricultural product prices, trends, and predictions for farmers using real-time data.</p>
+        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+      </div>
+
+      <div class="card">
+        <h3>Weather Forecasting App</h3>
+        <p>A dynamic weather forecasting web app built using JavaScript that shows real-time forecasts, 7-day trends, and weather analytics with charts.</p>
+        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Let's connect for collaborations and freelance projects.</p>
+    <ul class="contact-list">
+      <li><strong>Name:</strong> A S Shridatta Aigal</li>
+      <li><strong>Phone:</strong> <a href="tel:+916363352453">+91 6363352453</a></li>
+      <li><strong>Email:</strong> <a href="mailto:shriaigal@gmail.com">shriaigal@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/a-s-shridatta-aigal-27b926323/" target="_blank">View Profile</a></li>
+      <li><strong>Instagram:</strong> <a href="https://instagram.com/shri_aigal" target="_blank">View Profile</a></li>
+    </ul>
+  </section>
+
+</body>
+<script>
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    },
+    {
+      threshold: 0.1
+    }
+  );
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+
+</html>
