@@ -14,8 +14,8 @@
     }
 
     body {
-      background: #f5f5f5;
-      color: #333;
+      background: #121212;
+      color: #f0f0f0;
       line-height: 1.6;
     }
 
@@ -27,13 +27,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #1e1e1e;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
       z-index: 100;
     }
 
     .logo {
       font-size: 2em;
+      color: #f0f0f0;
     }
 
     .logo span {
@@ -42,9 +43,10 @@
 
     nav a {
       text-decoration: none;
-      color: #555;
+      color: #ccc;
       margin: 0 15px;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -66,11 +68,13 @@
     h1 {
       font-size: 2.5em;
       margin-bottom: 20px;
+      color: #ffffff;
     }
 
     p {
       max-width: 800px;
       margin-bottom: 20px;
+      color: #ccc;
     }
 
     ul {
@@ -80,6 +84,7 @@
 
     ul li {
       margin-bottom: 10px;
+      color: #ddd;
     }
 
     .home-container {
@@ -114,10 +119,10 @@
     }
 
     .card {
-      background: #fff;
+      background: #1e1e1e;
       border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
       transition: transform 0.2s ease;
     }
 
@@ -132,6 +137,7 @@
 
     .card p {
       margin-bottom: 15px;
+      color: #ccc;
     }
 
     .gradient-btn {
@@ -144,13 +150,13 @@
       font-weight: 600;
       font-size: 1rem;
       text-decoration: none;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .gradient-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
     }
 
     .gradient-btn .blink {
@@ -165,6 +171,7 @@
 
     .contact-list li {
       margin-bottom: 10px;
+      color: #ddd;
     }
 
     @media(max-width: 768px) {
@@ -185,36 +192,33 @@
         margin-top: 30px;
       }
     }
-    /* Animation: fade up */
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 2s ease-out;
-}
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+    /* Fade up animation */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease-out, transform 2s ease-out;
+    }
 
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
   </style>
 </head>
 <body>
-
-
-
 
   <header>
     <h2 class="logo"><span>shri</span>aigal</h2>
@@ -230,14 +234,13 @@ section.visible {
   <!-- HOME SECTION -->
   <section id="home">
     <div class="home-container">
-<div class="home-text">
-  <h1>Hi, I'm A S Shridatta Aigal</h1>
-  <p>I'm a passionate Frontend Developer dedicated to creating beautiful, responsive, and user-friendly web experiences. With a solid background in HTML, CSS, JavaScript, and modern frameworks, I bring ideas to life in the browser.</p>
-  <p>My goal is to craft websites and apps that not only look great but also perform flawlessly. I enjoy solving real-world problems through code and constantly push myself to learn new technologies and improve my skills.</p>
-  <p>Besides coding, I love collaborating with designers, product managers, and other developers to bring innovative ideas to life. I believe good design and clean code go hand-in-hand to create impactful digital products.</p>
-  <p>When I'm not working on projects, you'll often find me exploring new frameworks, contributing to open-source, or researching the latest trends in frontend development and software architecture.</p>
-</div>
-
+      <div class="home-text">
+        <h1>Hi, I'm A S Shridatta Aigal</h1>
+        <p>I'm a passionate Frontend Developer dedicated to creating beautiful, responsive, and user-friendly web experiences. With a solid background in HTML, CSS, JavaScript, and modern frameworks, I bring ideas to life in the browser.</p>
+        <p>My goal is to craft websites and apps that not only look great but also perform flawlessly. I enjoy solving real-world problems through code and constantly push myself to learn new technologies and improve my skills.</p>
+        <p>Besides coding, I love collaborating with designers, product managers, and other developers to bring innovative ideas to life. I believe good design and clean code go hand-in-hand to create impactful digital products.</p>
+        <p>When I'm not working on projects, you'll often find me exploring new frameworks, contributing to open-source, or researching the latest trends in frontend development and software architecture.</p>
+      </div>
       <div class="home-image">
         <img src="static/my photo.png" alt="Shridatta Aigal">
       </div>
@@ -268,19 +271,19 @@ section.visible {
       <div class="card">
         <h3>Student Academic Portal</h3>
         <p>A complete student management system to manage attendance, marks, and student data using Flask, SQLite, and modern frontend design.</p>
-        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+        <a href="https://studentacademicportal.pythonanywhere.com" target="_blank" class="gradient-btn">View Project <span class="blink">>></span></a>
       </div>
 
       <div class="card">
         <h3>AgriPrice Portal</h3>
         <p>A web application to track and display agricultural product prices, trends, and predictions for farmers using real-time data.</p>
-        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+        <a href="https://agripriceportal.pythonanywhere.com" target="_blank" class="gradient-btn">View Project <span class="blink">>></span></a>
       </div>
 
       <div class="card">
         <h3>Weather Forecasting App</h3>
         <p>A dynamic weather forecasting web app built using JavaScript that shows real-time forecasts, 7-day trends, and weather analytics with charts.</p>
-        <a href="#" class="gradient-btn">View Project <span class="blink">>></span></a>
+        <a href="https://wfjs.onrender.com" target="_blank" class="gradient-btn">View Project <span class="blink">>></span></a>
       </div>
     </div>
   </section>
@@ -298,29 +301,21 @@ section.visible {
     </ul>
   </section>
 
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
-<script>
-  const sections = document.querySelectorAll('section');
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
-      });
-    },
-    {
-      threshold: 0.1
-    }
-  );
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
-
-
 </html>
