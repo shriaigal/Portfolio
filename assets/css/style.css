@@ -1578,10 +1578,31 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * NAVBAR
    */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--eerie-black-2); /* dark theme */
+    z-index: 999;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  .navbar-link {
+    font-size: var(--fs-8);
+    font-weight: 500;
+  }
+    body {
+    padding-top: 60px;
+  }
 
-  .navbar-link { --fs-8: 15px; }
-
-
+  .navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+  }
 
   /**
    * ABOUT
